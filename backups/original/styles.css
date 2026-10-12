@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root { font-family: 'VT323', monospace; color: #fff8e9; background: #102c2f; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #102c2f; }
+button { font: inherit; }
+.app-shell { min-height: 100vh; padding: 34px 5vw 42px; overflow: hidden; background: radial-gradient(circle at 50% 0%, #254b4c 0, #173a3d 42%, #102b2f 100%); }
+.topbar { max-width: 1160px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.brand-mark { display: flex; align-items: center; gap: 13px; font: 16px 'Press Start 2P', monospace; letter-spacing: 1px; }
+.brand-star { color: #f8cb54; font-size: 28px; text-shadow: 3px 3px #9c5d36; }
+.top-actions { display: flex; gap: 15px; align-items: center; }
+.icon-button, .restart-button { color: #fff5db; border: 1px solid #426365; background: #1c4547; cursor: pointer; transition: .2s ease; }
+.icon-button { width: 39px; height: 39px; font-size: 20px; }
+.restart-button { padding: 10px 15px; font: 11px 'Press Start 2P', monospace; }
+.icon-button:hover, .restart-button:hover { background: #286063; transform: translateY(-2px); }
+.hero-copy { max-width: 1160px; margin: 73px auto 34px; }
+.eyebrow { margin: 0 0 21px; color: #f7c956; font: 12px 'Press Start 2P', monospace; letter-spacing: 1px; }
+.eyebrow span, .footer-note span { color: #f7c956; }
+h1 { margin: 0; color: #fff4dc; font: clamp(28px, 5vw, 62px) 'Press Start 2P', monospace; line-height: 1.25; letter-spacing: -2px; text-shadow: 4px 4px #17383a; }
+.intro { margin: 23px 0 0; color: #9db7af; font-size: 23px; letter-spacing: 1px; }
+.game-card { max-width: 1160px; margin: 0 auto; border: 1px solid #416365; padding: 10px; background: #1b4547; box-shadow: 0 20px 0 #0d252a, 0 28px 34px #081a1d88; }
+.game-hud { display:flex; justify-content:space-between; padding:12px 16px; color:#f8cb54; font:12px 'Press Start 2P', monospace; background:#173a3d; } .canvas-wrap { position:relative; overflow:hidden; border:1px solid #77a09a; background:#68b8c1; } canvas { display:block; width:100%; height:auto; image-rendering:pixelated; } .canvas-help { padding:8px; color:#a9c2b8; text-align:center; font:10px 'Press Start 2P', monospace; background:#173a3d; }
+.placeholder-sky { position: absolute; inset: 0 0 32%; background: linear-gradient(#61b7c2 0%, #9ed6cf 100%); }
+.placeholder-cloud { position: absolute; width: 150px; height: 35px; border-radius: 50px; background: #e2eee0; opacity: .9; }
+.placeholder-cloud::before, .placeholder-cloud::after { content: ''; position: absolute; bottom: 0; border-radius: 50%; background: inherit; }
+.placeholder-cloud::before { left: 28px; width: 65px; height: 65px; } .placeholder-cloud::after { left: 75px; width: 45px; height: 45px; }
+.cloud-one { top: 16%; left: 12%; } .cloud-two { top: 28%; right: 13%; transform: scale(.72); }
+.placeholder-hill { position: absolute; bottom: 24%; width: 420px; height: 190px; border-radius: 50% 50% 0 0; background: #71a966; border: 8px solid #4b805c; }
+.hill-one { left: -90px; } .hill-two { right: -70px; transform: scale(.8); transform-origin: bottom; }
+.placeholder-ground { position: absolute; bottom: 0; width: 100%; height: 25%; background: repeating-linear-gradient(135deg, #6aa653 0 16px, #5b914a 16px 32px); border-top: 8px solid #3d683f; }
+.placeholder-message { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 17px; color: #fff8df; text-align: center; text-shadow: 3px 3px #315c57; }
+.message-icon { color: #f7c956; font-size: 32px; } .placeholder-message strong { font: 22px 'Press Start 2P', monospace; } .placeholder-message small { font-size: 19px; letter-spacing: 2px; }
+.is-paused .game-placeholder { filter: saturate(.55); } .is-paused .placeholder-message { background: #102c2f55; }
+.controls { max-width: 600px; margin: 41px auto 0; display: flex; justify-content: space-between; align-items: center; color: #91aaa4; font: 12px 'Press Start 2P', monospace; }
+.control-group { display: flex; align-items: center; gap: 8px; } .key { display: inline-grid; place-items: center; min-width: 34px; height: 34px; border: 1px solid #577873; border-bottom: 3px solid #3d5c59; background: #234b4c; color: #f9e8c5; font-size: 17px; } .wide-key { margin-right: -8px; } .space-key { width: 76px; font-size: 9px; }
+.footer-note { margin: 70px auto 0; text-align: center; color: #698b87; font: 10px 'Press Start 2P', monospace; letter-spacing: 1px; }
+@media (max-width: 650px) { .app-shell { padding: 22px 18px 32px; } .brand-mark { font-size: 10px; } .brand-star { font-size: 22px; } .restart-button { padding: 9px; font-size: 8px; } .icon-button { width: 34px; height: 34px; } .hero-copy { margin-top: 52px; } .eyebrow { font-size: 9px; line-height: 1.6; } .intro { font-size: 19px; } .game-placeholder { min-height: 390px; } .placeholder-message strong { font-size: 15px; } .placeholder-message small { font-size: 14px; } .controls { gap: 12px; font-size: 8px; flex-wrap: wrap; justify-content: center; } .footer-note { margin-top: 45px; font-size: 8px; line-height: 2; } }
+
+.controls { line-height: 2; text-align: center; }
+.canvas-help { line-height: 1.8; }
+@media (max-width:650px) { .canvas-help { font-size:7px; } }
